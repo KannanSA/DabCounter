@@ -82,7 +82,7 @@ struct ContentView: View {
                 .controlSize(.small)
             }
             .padding(.horizontal, 4)
-            .padding(.bottom, 2)
+            .padding(.bottom, 6)
             .frame(width: geo.size.width, height: geo.size.height)
         }
         .fontDesign(.rounded)

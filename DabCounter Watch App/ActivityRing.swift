@@ -32,14 +32,16 @@ struct ActivityRing: View {
                     )
             }
 
-            Circle()
-                .trim(from: 0, to: visibleFraction)
-                .stroke(
-                    color,
-                    style: StrokeStyle(lineWidth: lineWidth, lineCap: .round)
-                )
-                .rotationEffect(.degrees(-90))
-                .shadow(color: color.opacity(0.65), radius: 2.5, y: 0)
+            if visibleFraction > 0 {
+                Circle()
+                    .trim(from: 0, to: visibleFraction)
+                    .stroke(
+                        color,
+                        style: StrokeStyle(lineWidth: lineWidth, lineCap: .round)
+                    )
+                    .rotationEffect(.degrees(-90))
+                    .shadow(color: color.opacity(0.65), radius: 2.5, y: 0)
+            }
         }
         .padding(lineWidth / 2)
         .animation(.easeInOut(duration: 0.28), value: progress)

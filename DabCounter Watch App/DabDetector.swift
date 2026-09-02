@@ -2,7 +2,7 @@ import Foundation
 
 /// Peak-and-settle detector for a dab: a sharp wrist acceleration plus rotation,
 /// with a cooldown so one gesture cannot register twice.
-struct DabDetector: Equatable {
+struct DabDetector {
     var accelerationThreshold: Double = 1.5
     var rotationThreshold: Double = 4.0
     var magnitudeAccelerationThreshold: Double = 2.2
